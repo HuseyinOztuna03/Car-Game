@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float ms;
+    public float moveInput;
 
-    void Start()
+    void FixedUpdate()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        moveInput = Input.GetAxis("Horizontal");
+        transform.Translate(transform.right * Time.fixedDeltaTime * ms * moveInput);
     }
 }
