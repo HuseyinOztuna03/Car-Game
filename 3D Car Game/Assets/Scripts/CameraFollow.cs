@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform car;
+    Vector3 remainder;
+
     void Start()
     {
-        
+        remainder = transform.position - car.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position = car.position + remainder;
     }
 }
