@@ -11,5 +11,6 @@ public class Player : MonoBehaviour
     {
         moveInput = Input.GetAxis("Horizontal");
         transform.Translate(transform.right * Time.fixedDeltaTime * ms * moveInput);
+        transform.Translate(transform.forward * Time.fixedDeltaTime * ms);
     }
 }
