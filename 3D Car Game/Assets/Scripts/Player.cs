@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         transform.Translate(transform.forward * Time.fixedDeltaTime * ms);
 
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("obstacle"))
         {
@@ -34,5 +34,5 @@ public class Player : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
+    }*/
 }
